@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/Chrome_Extension-Official-10b981?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Chrome Extension" />
   <img src="https://img.shields.io/badge/Privacidade-100%25_Local-6d4aff?style=for-the-badge" alt="Privacidade" />
   <a href="https://4u.ia.br/app/printscreencapture/"><img src="https://img.shields.io/badge/Web_App-4U.IA.BR-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Web App" /></a>
+  <a href="https://chromewebstore.google.com/search/4u.ia.br"><img src="https://img.shields.io/badge/Chrome_Web_Store-Dispon%C3%ADvel-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Chrome Web Store" /></a>
 </p>
 
 ---
