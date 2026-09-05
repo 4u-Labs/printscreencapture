@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Captura Completa Isolada - Visualização</title>
+    <style>
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+            background: linear-gradient(135deg, #38bdf8, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            color: #94a3b8;
+            margin: 0;
+        }
+        .actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+        }
+        button.secondary {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #f8fafc;
+            box-shadow: none;
+        }
+        button.secondary:hover {
+            background: #334155;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+        .preview-container {
+            max-width: 100%;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+            overflow: auto;
+            max-height: 70vh;
+            border: 1px solid #334155;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            background-color: white;
+            border-radius: 6px;
+        }
+        .status-msg {
+            color: #38bdf8;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Captura Completa Unificada</h1>
+        <p>Esta página reconstrói os frames coletados em uma única imagem.</p>
+    </div>
+    
+    <div class="status-msg" id="status">Carregando frames e costurando...</div>
+    
+    <div class="actions" id="actions" style="display: none;">
+        <button id="downloadPng">Baixar como PNG</button>
+        <button id="downloadJpg" class="secondary">Baixar como JPEG</button>
+        <button id="btnEdit" style="background: linear-gradient(135deg, #10b981, #047857); box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3);">Editar & Anotar 🎨</button>
+    </div>
+
+    <div class="preview-container">
+        <canvas id="stitchCanvas"></canvas>
+    </div>
+
+    <script src="capture.js"></script>
+</body>
+</html>
