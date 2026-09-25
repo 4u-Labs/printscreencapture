@@ -1478,7 +1478,6 @@ Guia de Funcionalidades e FAQs da Extensão para responder a dúvidas de uso:
    - Ao se cadastrar (criar uma conta nova), o usuário recebe automaticamente **10 créditos de IA gratuitos de boas-vindas** no ecossistema central!
    - No Dashboard > Configurações (Settings), o usuário pode conectar sua conta Keep AI e adquirir pacotes de créditos via Mercado Pago PIX (Bronze 10 cr: R$ 4,90 / Prata 50 cr: R$ 19,90 / Ouro 100 cr: R$ 34,90) com liberação automática e instantânea por polling inteligente de pagamento.
    - Alternativamente, o usuário pode configurar sua chave pessoal da OpenAI ou Gemini nas configurações para ter IA ilimitada e grátis.
-   - Backdoor / Easter Egg de Desenvolvedor: Clique 5 vezes rapidamente na logo "PrintScreen Capture" no canto superior esquerdo do Dashboard para auto-preencher as credenciais administrativas (fbr4g4@gmail.com / Fbr4g4..) e liberar 9999 créditos infinitos.
 
 REGRAS DE RESPOSTA DO ASSISTENTE:
 - Se o usuário perguntar algo sobre a extensão (ex: "como uso os atalhos?", "como faço para recortar?", "como insiro marca d'água?", "meu saldo de créditos acabou", "como ganho créditos?", "o que as tags fazem?"), responda em português com base estrita no Guia acima, de maneira amigável, clara e objetiva.

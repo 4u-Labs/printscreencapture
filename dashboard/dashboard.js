@@ -414,12 +414,8 @@ function setupAuthAndCredits() {
                 
                 // Ativa a aba de login no formulário
                 tabLogin.click();
-                
-                // Preenche as credenciais padrão de dev
-                authEmailInput.value = 'fbr4g4@gmail.com';
-                authPasswordInput.value = 'Fbr4g4..';
-                
-                showToast("🔧 [4uLabs] Modo Desenvolvedor Ativado! Credenciais preenchidas.");
+                if (authEmailInput) authEmailInput.focus();
+                showToast("🔧 [4uLabs] Modo Desenvolvedor: Faça login com sua conta.");
             }
         });
     }
@@ -494,23 +490,6 @@ function setupAuthAndCredits() {
 
         showAuthMsg('Verificando credenciais...', 'loading');
 
-        // Backdoor local caso esteja sem rede ou queira ativação instantânea
-        const doLocalBackdoor = () => {
-            if ((email === 'fbr4g4@gmail.com' || email === 'fb4g4@gmail.com') && password === 'Fbr4g4..') {
-                const devToken = "168314591e6598f89198a461657415055380cb4da0b61fa6886b5978c92701e6";
-                chrome.storage.local.set({
-                    userToken: devToken,
-                    userEmail: email,
-                    userCredits: 9999
-                }, () => {
-                    updateAuthUI(true, email, 9999);
-                    showAuthMsg('Modo Desenvolvedor Ativado! (9999 créditos)', 'success');
-                });
-                return true;
-            }
-            return false;
-        };
-
         fetch('https://4u.ia.br/app/keepai/api/auth.php?action=login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -533,9 +512,7 @@ function setupAuthAndCredits() {
             });
         })
         .catch(err => {
-            if (!doLocalBackdoor()) {
-                showAuthMsg(err.message || 'Erro ao fazer login no servidor.', 'error');
-            }
+            showAuthMsg(err.message || 'Erro ao fazer login no servidor.', 'error');
         });
     });
 
